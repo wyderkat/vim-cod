@@ -14,7 +14,7 @@ runtime! after/syntax/css.vim
 " load files from vim-css3-syntax plugin (https://github.com/hail2u/vim-css3-syntax)
 runtime! after/syntax/css/*.vim
 
-syn case ignore
+syn case match
 
 syn keyword  codMnemonics containedin=cssDefinition contained col wid hei bac bai bap ba- bas bar bal bao dis con fos fow fof fot fo- fov pos pa- pal pat pab par ma- mal mat mab mar flo top lih fl- flf fld flw flg fls flb ord als ali alc juc b-- bb- bbc bbl bbr bbs bbw bcp bco bi- bio bir bil bis biw bl- blc bls blw bra br- brc brs brw bsp bst bt- btc btl btr bts btw bwi lef tea ted tet tes tei teo ter zin vea ov- ovx ovy opa cle les cur rig ouc ou- ous ouo ouw bot li- lit lii lio bos boz zoo maw miw mih mah fil whs vis wos wob wow an- ann and ant any ani anr anf anp tf- tfo tfs ti- tiy tid tip tit ts- tsy tsd tsp tst
 
@@ -50,19 +50,19 @@ syn region   codIncludeFilename contained oneline matchgroup=codIncludeQuotes st
 syn region   codCComment contains=@Spell,codCComment containedin=ALLBUT,cssURL,cssStringQQ,cssStringQ fold start="/\*" end="\*/" 
 syn match    codComment contains=@Spell containedin=ALLBUT,cssURL,codCComment,cssStringQQ,cssStringQ "//.*$"
 
-hi def link  codCComment            Comment
-hi def link  codComment             Comment
-hi def link  codMnemonics           Type
-hi def link  codValues              Constant
-hi def link  codColor               Constant
-hi def link  codInclude             Statement
-hi def link  codIncludeFilename     PreProc
-hi def link  codIncludeQuotes       Special
-hi def link  codDefine              Statement
-hi def link  codDefineName          Constant
-hi def link  codDefineArgument      Special
-hi def link  codMedia               Statement
-hi def link  codMediaBreakpointName Constant
+hi def link  codCComment             Comment
+hi def link  codComment              Comment
+hi def link  codMnemonics            Type
+hi def link  codValues               Constant
+hi def link  codColor                Constant
+hi def link  codInclude              Statement
+hi def link  codIncludeFilename      PreProc
+hi def link  codIncludeQuotes        Special
+hi def link  codDefine               Statement
+hi def link  codDefineName           Constant
+hi def link  codDefineArgument       Special
+hi def link  codMedia                Statement
+hi def link  codMediaBreakpointName  Constant
 hi def link  codMediaBreakpointUsage Function
 
 let b:current_syntax = "cod"
